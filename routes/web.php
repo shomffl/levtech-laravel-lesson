@@ -11,4 +11,11 @@
 |
 */
 
+<<<<<<< HEAD
+Route::get("/", function(){
+    return view("index");
+});
+
+=======
+>>>>>>> ddfa07c74ca2bdc6a8c96bef9de26af3548995de
 Route::get('/posts', 'PostController@index');
