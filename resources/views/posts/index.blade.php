@@ -20,7 +20,22 @@
                 class="title"><a href="/posts/{{$post->id}}">{{$post->title}}</a></h2>
                 <p class="body">{{$post->body}}</p>
             </div>
+            <form action="/posts/{{$post->id}}" id="form_{{$post->id}}" method="post" style="display:inline">
+                @csrf
+                @method("DELETE")
+                <button type="submit" onclick="return checkDelete()">delete</button>
+            </form>
             @endforeach
         </div>
+        <script>
+            function checkDelete(){
+                const result = window.confirm("本当に削除しますか？");
+                if (result){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        </script>
     </body>
 </html>
