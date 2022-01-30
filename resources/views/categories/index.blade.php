@@ -25,7 +25,7 @@
                 @method("DELETE")
                 <button type="submit" onclick="return checkDelete()">delete</button>
             </form>
-            <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
+            <a href="">{{ $post->category->name }}</a>
             @endforeach
         </div>
         <script>
