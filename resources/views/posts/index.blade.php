@@ -32,6 +32,15 @@
             <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
             @endforeach
         </div>
+        <div>
+        @foreach($questions as $question)
+            <div>
+              <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                {{ $question['title'] }}
+              </a>
+             </div>
+        @endforeach
+    </div>
         <script>
             function checkDelete(){
                 const result = window.confirm("本当に削除しますか？");
